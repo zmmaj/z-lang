@@ -1,0 +1,9 @@
+>> Inicijalizacija i prva racunica <<
+ObimZice = 40 ;
+Prostor = PPOVRSINA(ObimZice) ; >> Racunamo povrsinu u hodu <<
+Ukupno = Prostor + 10 ;
+>> 
+   Ispisujemo krajnji rezultat 
+   na ekran virtuelne masine
+<<
+ISPISI(Ukupno) ;
