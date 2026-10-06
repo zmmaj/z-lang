@@ -8,5 +8,8 @@ Ucita externi fajl sa zadatkom,
 izracuna ga kroz Virtualnu masinu ( masinski kodovi) i
 izbaci rezultat na kraju...
 
+Za sada ucitava samo kod iz "kod.txt" i nista drugo.
+Da bi pokrenuli z_lang samo to i upisite bez ikakvih argumenata.
+
 dakle radi..
 za dalje videcemo
