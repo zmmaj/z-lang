@@ -65,6 +65,18 @@ int lexer_tokenizuj(const char* ulaz, Token* izlaz_tokeni, int max_tokena) {
                 t->type = Z_TK_KR_ODREDI;
             } else if (strcmp(t->value, "ISPISI") == 0) {
                 t->type = Z_TK_KR_ISPISI;
+            } else if (strcmp(t->value, "AKO") == 0) {    
+                t->type = Z_TK_KR_AKO;
+            } else if (strcmp(t->value, "ONDA") == 0) {  
+                t->type = Z_TK_KR_ONDA;
+            } else if (strcmp(t->value, "DOK") == 0) {    
+                t->type = Z_TK_KR_AKO; 
+            } else if (strcmp(t->value, "FUNKCIJA") == 0) { 
+                t->type = Z_TK_KR_FUNKCIJA;
+            } else if (strcmp(t->value, "POZOVI") == 0) {    
+                t->type = Z_TK_KR_POZOVI;
+            } else if (strcmp(t->value, "VRATI") == 0) {     
+                t->type = Z_TK_KR_VRATI;
             } else {
                 t->type = Z_TK_IDENTIFIKATOR;
             }
@@ -84,3 +96,4 @@ int lexer_tokenizuj(const char* ulaz, Token* izlaz_tokeni, int max_tokena) {
 
     return t_idx; // Vraćamo ukupan broj prepoznatih tokena u liniji
 }
+
