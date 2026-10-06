@@ -1,9 +1,21 @@
->> Inicijalizacija i prva racunica <<
-ObimZice = 40 ;
-Prostor = PPOVRSINA(ObimZice) ; >> Racunamo povrsinu u hodu <<
-Ukupno = Prostor + 10 ;
->> 
-   Ispisujemo krajnji rezultat 
-   na ekran virtuelne masine
-<<
-ISPISI(Ukupno) ;
+Kontrola = 999 ;
+
+>> 🔀 PREČICA: Preskačemo funkciju čistim malim slovima
+SKOCI = krajfunkcije ;
+
+>> 🌟 DEFINICIJA FUNKCIJE: Skroz mala slova bez crta i razmaka!
+FUNKCIJA: stampaj ;
+    A = 777 ;
+    ISPISI(A) ;
+VRATI ;
+
+>> Oznaka kraja funkcije
+OZNAKA: krajfunkcije ;
+
+>> 🚀 GLAVNI PROGRAM KOJI POZIVA FUNKCIJU
+POZOVI = stampaj ;
+
+>> Amortizer linija za čišćenje prolaza
+Zbir = 1 + 1 ; 
+
+ISPISI(Kontrola) ;

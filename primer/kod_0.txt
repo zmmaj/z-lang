@@ -1,0 +1,50 @@
+Kontrola = 999 ;
+A = 50 ;
+B = 20 ;
+
+>> Test 1: Uslov sa VEĆE OD (50 > 20) je TAČAN i izvršava se
+AKO(A>B) ONDA(ISPISI(A)) ;
+
+X = 10 ;
+Y = 30 ;
+
+>> Test 2: Uslov sa MANJE OD (10 < 30) je TAČAN i izvršava se
+AKO(X<Y) ONDA(ISPISI(X)) ;
+
+>> Test 3: Uslov sa MANJE OD (50 < 20) je NETAČAN i VM ga preskače
+AKO(A<B) ONDA(ISPISI(B)) ;
+
+C = 40 ;
+D = 40 ;
+
+>> Test 4: Uslov sa JEDNAKO (40 == 40) je TAČAN i izvršava se
+AKO(C==D) ONDA(ISPISI(C)) ;
+
+>> Test 5: Uslov sa JEDNAKO (50 == 20) je NETAČAN i VM ga preskače
+AKO(A==B) ONDA(ISPISI(A)) ;
+
+>> Test 6: Uslov sa RAZLIČITO (50 != 20) je TAČAN i izvršava se
+AKO(A!=B) ONDA(ISPISI(B)) ;
+
+>> Test 7: Uslov sa RAZLIČITO (40 != 40) je NETAČAN i VM ga preskače
+AKO(C!=D) ONDA(ISPISI(C)) ;
+
+>> 🌟 NOVI TEST 8: Višelinijska DOK petlja sa ugnježđenim AKO blokom (Brojanje UNAPRED)
+Brojac = 1 ;
+DOK(Brojac<5) ONDA(
+    Brojac = Brojac + 1 ;
+    AKO(Brojac==3) ONDA(ISPISI(Brojac)) ;
+) ;
+
+>> 🌟 NOVI TEST 9: DOK petlja koja ide UNAZAD (Odbrojavanje)
+>> Kreće od 5. Svaki krug se smanjuje za 1. Kada stigne tačno do 2, štampa vrednost!
+Odbrojavac = 5 ;
+DOK(Odbrojavac>0) ONDA(
+    Odbrojavac = Odbrojavac - 1 ;
+    AKO(Odbrojavac==2) ONDA(ISPISI(Odbrojavac)) ;
+) ;
+
+>> Amortizer linija za čišćenje prolaza
+Zbir = 1 + 1 ; 
+
+ISPISI(Kontrola) ;

@@ -1,0 +1,26 @@
+Kontrola = 999 ;
+
+>> 🔀 TEST 10a: SKOK UNAPRED (Aktivira Backpatching)
+SKOCI = ZonaJedan ;
+
+>> Izbačeno slovo ž iz imena varijable!
+LaznaKontrola = 111 ;
+ISPISI(LaznaKontrola) ;
+Kontrola = 555 ;
+
+>> Definišemo prvu bezbednu zonu (Labelu) na koju mašina sleće
+OZNAKA: ZonaJedan ;
+
+Mnoziitelj = 2 ;
+ISPISI(Mnoziitelj) ;
+
+>> 🌟 POPRAVLJENO: Spakovano u jednu liniju tako da se završava sa ; 
+AKO(Mnoziitelj==2) ONDA(Mnoziitelj = Mnoziitelj + 1 ; SKOCI = ZonaJedan) ;
+
+>> Ponovo štampamo Mnoziitelj (mora biti 3.00)
+ISPISI(Mnoziitelj) ;
+
+>> Amortizer linija za čišćenje prolaza
+Zbir = 1 + 1 ; 
+
+ISPISI(Kontrola) ;
