@@ -5,6 +5,9 @@
 
 // Tokeni usklađeni sa zvaničnom C gramatikom, prevedeni na srpski
 typedef enum {
+    Z_TK_KR_FUNKCIJA,     // Ključna reč FUNKCIJA
+    Z_TK_KR_POZOVI,       // Ključna reč POZOVI
+    Z_TK_KR_VRATI,        // Ključna reč VRATI
     Z_TK_IDENTIFIKATOR,   // Promenljive, brojevi, funkcije (ObimZice, 40, PPOVRSINA)
     Z_TK_DODELA,          // =
     Z_TK_PLUS,            // +
@@ -21,6 +24,13 @@ typedef enum {
     Z_TK_KR_ODREDI,       // Ključna reč ODREDI
     Z_TK_KR_ISPISI,       // Ključna reč ISPISI
     Z_TK_SIGNAL_DALJE,    // Donja crta _
+    
+    // NAŠE NOVE SNAGE:
+    Z_TK_KR_AKO,          // Ključna reč AKO
+    Z_TK_KR_ONDA,         // Ključna reč ONDA
+    Z_TK_VECE,            // Operator poređenja '>'
+    Z_TK_MANJE,           // Operator poređenja '<'
+
     Z_TK_GRESKA,          // Nepoznat karakter
     Z_TK_KRAJ_LINIJE      // Kraj obrade stringa
 } token_type_t;
@@ -29,6 +39,7 @@ typedef struct {
     token_type_t type;
     char value[64];       // Tekstualni sadržaj tokena
 } Token;
+
 
 // Funkcija koja upeglanu liniju razbija na niz srpskih tokena
 int lexer_tokenizuj(const char* ulaz, Token* izlaz_tokeni, int max_tokena);
