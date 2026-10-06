@@ -27,7 +27,7 @@
 #
 
 deps = [ 'posix' ]
-src = files('main.c', 'sanitizer.c', 'lexer.c')
+src = files('main.c', 'sanitizer.c', 'lexer.c', 'funkcije.c')
 
 
 if install_nonessential_data
