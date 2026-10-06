@@ -4,12 +4,14 @@
 #include <stdint.h>
 #include <task.h>
 #include <errno.h>
-#include <elf/elf_mod.h>  // Javna HelenOS userspace ELF zaglavlja
+#include <elf/elf_mod.h>  // Javna SrBinOS userspace ELF zaglavlja
 
-#define MAX_PROMENLJIVIH 20
+#define MAX_PROMENLJIVIH 256
 #define MAX_DUZINA_IMENA 21
 #define MULTIPLIKATOR 1000000LL
 #define SIGNAL_DALJE -1
+
+#define KOPIRAJ 1
 
 // Kodovi sistemskih grešaka
 #define ERR_NONE               0
@@ -18,6 +20,11 @@
 #define ERR_NEPOZNATA_KOMANDA  3
 #define ERR_FALI_TACKA_ZAREZ   4
 #define ERR_PREDUGACKO_IME     5
+
+
+#define OP_AKO  0x35
+#define OP_ONDA 0x36
+
 
 // Naša univerzalna unija od 16 bajtova ostaje nepromenjena
 #pragma pack(push, 1)
@@ -39,6 +46,9 @@ extern int Velicina_Generisanog_Koda;
 extern int Trenutna_Linija_Kompajliranja;
 extern const char* Sirova_Linija_Teksta;
 
+void zlog(const char* format, ...);
+int kopiraj_fajl(const char *src_file);
+int Nadji_Ili_Dodaj_Labelu(const char* ime, int trenutni_pc, int samo_trazi);
 void prijavi_sistemsku_gresku(int kod_greske, const char* detalj);
 int Tabela_Simbola(const char* ime);
 int obradi_argument_sa_znakom(Token t, int unarni_minus);
